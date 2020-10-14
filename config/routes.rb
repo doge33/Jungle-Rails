@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resource :cart, only: [:show] do
     post   :add_item
-    post   :remove_item
+    post   :remove_item #action in the cart_controller 
   end
 
   resources :orders, only: [:create, :show]
