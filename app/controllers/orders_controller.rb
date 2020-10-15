@@ -45,7 +45,7 @@ class OrdersController < ApplicationController
     enhanced_cart.each do |entry|
       product = entry[:product]
       quantity = entry[:quantity]
-      order.line_items.new(
+      order.line_items.new( #this is where you create data for tables in db
         product: product,
         quantity: quantity,
         item_price: product.price,
@@ -53,6 +53,13 @@ class OrdersController < ApplicationController
       )
     end
     order.save!
+    puts "---------------in create_order; the email used here is"
+    p order[:email]
+    puts ".......order.line_items are"
+    p order.line_items
+    puts "-------strip_charge amount is"
+    p stripe_charge[:amount]
+
     order
   end
 
