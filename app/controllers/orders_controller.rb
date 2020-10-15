@@ -53,13 +53,6 @@ class OrdersController < ApplicationController
       )
     end
     order.save!
-    puts "---------------in create_order; the email used here is"
-    p order[:email]
-    puts ".......order.line_items are"
-    p order.line_items
-    puts "-------strip_charge amount is"
-    p stripe_charge[:amount]
-
     order
   end
 
