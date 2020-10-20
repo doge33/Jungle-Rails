@@ -31,7 +31,7 @@ RSpec.describe User, type: :model do
     end
 
     it "should fail to create user if password length is less then 6" do
-      user = User.new(name: "Liz", email: "liz@liz.com", password: "123", password_confirmation: "123")
+      user = User.new(name: "Jaz", email: "jaz@jaz.com", password: "123", password_confirmation: "123")
       expect(user.save).to be_falsey
     end
   end
@@ -39,12 +39,23 @@ RSpec.describe User, type: :model do
   describe ".authenticate_with_credentials" do
 
     before do
-      Liz = User.create(name: "Liz", email: "liz@liz.com", password: "123456", password_confirmation: "123456")
+      Sal = User.create(name: "Sal", email: "saL@Sal.Com", password: "123456", password_confirmation: "123456")
+
     end
 
     it "should successfully log in with correct credentials" do
-      user = User.authenticate_with_credentials("liz@liz.com", "123456")
-      expect(user).to eq(Liz)
+      user = User.authenticate_with_credentials("sal@sal.com", "123456")
+      expect(user).to eq(Sal)
+    end
+
+    it "should successfully log in even with blank spaces" do
+      user = User.authenticate_with_credentials(" sal@sal.com", "123456")
+      expect(user).to eq(Sal)
+    end
+
+    it "should successfully log in even with different cases" do
+      user = User.authenticate_with_credentials("SAL@sal.COM", "123456")
+      expect(user).to eq(Sal)
     end
 
     it "should fail to log in if user does not exist" do
@@ -53,7 +64,7 @@ RSpec.describe User, type: :model do
     end
 
     it "should fail to log in if password entered is incorrect" do
-      user = User.authenticate_with_credentials("liz@liz.com", "654321")
+      user = User.authenticate_with_credentials("sal@sal.com", "654321")
       expect(user).to be_nil
 
     end

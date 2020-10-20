@@ -8,8 +8,6 @@ class UsersController < ApplicationController
   def create
     user = User.new(user_params)
     if user.save
-      puts "~~~~~~~~~~~~~~~~~~~~~"
-      p user
       session[:user_id] = user.id
     
       redirect_to '/'
