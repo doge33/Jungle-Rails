@@ -1,0 +1,14 @@
+main section.users-new {
+
+  #sign_up {
+    form {
+    display: flex;
+    flex-direction: column;
+    
+    input {
+      margin-bottom: 1em
+    }
+    }
+  }
+  
+}

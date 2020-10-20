@@ -1,13 +1,16 @@
-<h1>Signup!</h1>
+<section class="users-new">
+  <h1>Signup!</h1>
 
-<div id="sign_up">
-  <%= form_for :user, url: '/users' do |f| %>
+  <div id="sign_up" style="display: table">
+    <%= form_for :user, url: '/users' do |f| %>
 
-    Name: <%= f.text_field :name %>
-    Email: <%= f.text_field :email %>
-    Password: <%= f.password_field :password %>
-    Password Confirmation: <%= f.password_field :password_confirmation %>
-    <%= f.submit "Submit" %>
+      First Name: <%= f.text_field :first_name %>
+      Last Name: <%= f.text_field :last_name %>
+      Email: <%= f.text_field :email %>
+      Password: <%= f.password_field :password %>
+      Password Confirmation: <%= f.password_field :password_confirmation %>
+      <%= f.submit "Submit" %>
 
-  <% end %>
-</div>
+    <% end %>
+  </div>
+</section>

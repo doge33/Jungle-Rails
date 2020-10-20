@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_secure_password # this gives User model authentication mathods vis BCRYPT
-
+  validates :first_name, presence: true
+  validates :last_name, presence: true
   validates :email, uniqueness: { case_sensitive: false}
   validates :password, length: {minimum: 6}
   before_save :normalize_email
