@@ -1,6 +1,20 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A inherted mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. 
+
+Additional features such as user authentication, display of order details, admin resources and security were implemented utilizing Active Records, sqlite3 and views.
+
+Automated tests were also implemented using RSpec, Capybara and Poltergeist. 
+
+Stay tuned for more features to come. 
+
+## Final Product
+
+!["screenshot of order details"]()
+
+!["screenshot of sold-out products"]()
+
+!["screenshot of admin new product page"]()
 
 
 ## Setup
