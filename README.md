@@ -1,6 +1,6 @@
 # Jungle
 
-A inherted mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. 
+An inherted mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. 
 
 Additional features such as user authentication, display of order details, admin resources and security were implemented utilizing Active Records, sqlite3 and views.
 
@@ -10,11 +10,11 @@ Stay tuned for more features to come.
 
 ## Final Product
 
-!["screenshot of order details"]()
+!["screenshot of order details"](https://github.com/doge33/Jungle-Rails/blob/master/docs/order_details.png?raw=true)
 
-!["screenshot of sold-out products"]()
+!["screenshot of sold-out products"](https://github.com/doge33/Jungle-Rails/blob/master/docs/sold_out.png?raw=true)
 
-!["screenshot of admin new product page"]()
+!["screenshot of admin new product page"](https://github.com/doge33/Jungle-Rails/blob/master/docs/admin_new_product.png?raw=true)
 
 
 ## Setup
